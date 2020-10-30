@@ -1,0 +1,18 @@
+{
+  "successfulTxnMessage": "Operation completed successfully",
+  "billerCode": 857763,
+  "amount": 10,
+  "validMwalletTxnMessage": "BPAY required a valid mWallet. No valid mWallet was supplied",
+  "invalidMAccountToken": "MAccount.token does does not represent a valid MAccount \"{0}\"",
+  "invalidMwalletToken": "The mWallet referenced by mWallet.token does not exist - \"62790597842269760\"",
+  "invalidBillerCode": "disbursements[0]. Unknown BPAY BillerCode - \"8577639\"",
+  "invalidReferenceNumber": "disbursements[0]. ReferenceNumber failed validation - \"62790597000109182\"",
+  "invalidCustomerPin": "The mWallet.pin value is incorrect for the MAccount referenced by mWallet.token",
+  "invalidAmount": "Invalid totalAmount. Value must be >= $0.00 - \"$0.00\"",
+  "invalidTotalAmount": "Invalid totalAmount - \"$0.0010\"",
+  "disbursementBpayAmountIsInvalid": "disbursements[0]. BPAY Amount is invalid - \"$9.00\"",
+  "exceedMaxTransactionLimit": "Invalid totalAmount. The totalAmount \"$100,000,001.00\" exceeds the allowed maximum transaction limit \"$100,000,000.00\"",
+  "invalidBSBNumber": "disbursements[0].toDirectCreditDetails The toDirectCredit details are invalid. Reason: \"Field Name:'bsb'  Error Description:'BSB '03-000' must be in the following format: Either '999999' or '999-999''\"",
+  "invalidAccountNumber": "disbursements[0].toDirectCreditDetails The toDirectCredit details are invalid. Reason: \"Field Name:'accountNumber'  Error Description:'Account Number '5665333334983' is not a valid bank account number.'\"",
+  "invalidWalletTotalAmount": "Invalid totalAmount - \"$1.0001\""
+}

@@ -1,0 +1,92 @@
+{
+  "positiveTestData": {
+    "directDebitDisbursment": {
+      "totalAmount": "10",
+      "paymentSource": "directDebit",
+      "lodgementReference": "monoova-123",
+      "directDebit": {
+        "bsbNumber": "032-000",
+        "accountNumber": "56654983",
+        "accountName": "Monoova"
+      }
+    },
+    "directDebitTomWalletDisbursement": {
+      "totalAmount": "10",
+      "paymentSource": "directDebit",
+      "directDebit": {
+        "bsbNumber": "032-000",
+        "accountNumber": "2681849",
+        "accountName": "Monoova"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "mWallet",
+          "description": "DirectDebit as payment source to mWallet disbursment",
+          "toMWallet": "6279059784226976",
+          "amount": "10"
+        }
+      ]
+    },
+    "directDebitTomAccountDisbursement": {
+      "totalAmount": "10",
+      "paymentSource": "directDebit",
+      "directDebit": {
+        "bsbNumber": "032-000",
+        "accountNumber": "2681849",
+        "accountName": "Monoova"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "mAccount",
+          "description": "DirectDebit as payment source to mAccount as disbursment",
+          "toMAccount": "6279059778335999",
+          "amount": "10"
+        }
+      ]
+    },
+    "directDebitToDirectCreditAsDisbursement": {
+      "totalAmount": "10",
+      "paymentSource": "directDebit",
+      "directDebit": {
+        "bsbNumber": "032-000",
+        "accountNumber": "2681849",
+        "accountName": "Monoova"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "directCredit",
+          "toDirectCreditDetails": {
+            "bsbNumber": "032-000",
+            "accountNumber": "56654983",
+            "accountName": "Monoova"
+          },
+          "lodgementReference": "monoova-123",
+          "amount": "10"
+        }
+      ]
+    },
+    "directDebitToBPayAsDisbursement": {
+      "totalAmount": "10",
+      "paymentSource": "directDebit",
+      "directDebit": {
+        "bsbNumber": "032-000",
+        "accountNumber": "2681849",
+        "accountName": "Monoova"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "10"
+        }
+      ]
+    }
+  }
+}

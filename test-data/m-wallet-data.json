@@ -1,0 +1,130 @@
+{
+  "positiveTestData": {
+    "mWalletPaymentSourceTomWalletDisbursement": {
+      "disbursements": [
+        {
+          "disbursementMethod": "mWallet",
+          "description": "Another mWallet",
+          "toMWallet": "6279059784226976",
+          "amount": "10"
+        }
+      ]
+    },
+    "mWalletPaymentSourceTomAccountDisbursement": {
+      "totalAmount": "10",
+      "paymentSource": "mWallet",
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "mAccount",
+          "description": "mwallet paying to mAccount",
+          "toMAccount": "6279059778335999",
+          "amount": "10"
+        }
+      ]
+    },
+    "mWalletPaymentSourceTodirectCreditDisbursement": {
+      "totalAmount": "0.01",
+      "paymentSource": "mWallet",
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "directCredit",
+          "description": "mWallet to direct credit disbursement",
+          "toDirectCreditDetails": {
+            "bsbNumber": "032-000",
+            "accountNumber": "56654983",
+            "accountName": "Monoova"
+          },
+          "amount": "0.01"
+        }
+      ]
+    },
+    "mWalletPaymentSourceToBPayDisbursement": {
+      "totalAmount": "10",
+      "paymentSource": "mWallet",
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "10"
+        }
+      ]
+    }
+  },
+  "negativeTestData": {
+    "invalidBSBNumber": {
+      "totalAmount": "0.01",
+      "paymentSource": "mWallet",
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "directCredit",
+          "description": "mWallet to direct credit disbursement",
+          "toDirectCreditDetails": {
+            "bsbNumber": "03-000",
+            "accountNumber": "56654983",
+            "accountName": "Monoova"
+          },
+          "amount": "0.01"
+        }
+      ]
+    },
+    "invalidAccountNumber": {
+      "totalAmount": "10",
+      "paymentSource": "mWallet",
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "directCredit",
+          "description": "mWallet to direct credit disbursement",
+          "toDirectCreditDetails": {
+            "bsbNumber": "032-000",
+            "accountNumber": "5665333334983",
+            "accountName": "Monoova"
+          },
+          "amount": "10"
+        }
+      ]
+    },
+    "invalidTotalAmount": {
+      "totalAmount": "1.0001",
+      "paymentSource": "mWallet",
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "directCredit",
+          "description": "mWallet to direct credit disbursement",
+          "toDirectCreditDetails": {
+            "bsbNumber": "032-000",
+            "accountNumber": "56654983",
+            "accountName": "Monoova"
+          },
+          "amount": "1.0001"
+        }
+      ]
+    }
+  }
+}

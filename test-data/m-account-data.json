@@ -1,0 +1,286 @@
+{
+  "positiveTestData": {
+    "mAccountPmtSrcTobPayDisbursement": {
+      "totalAmount": "10",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "10"
+        }
+      ]
+    },
+    "mAccountPmtSrcTomWalletDisbursement": {
+      "totalAmount": "10",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "mWallet",
+          "description": "mAccount as payment source to mWallet disbursment",
+          "toMWallet": "6279059784226976",
+          "amount": "10"
+        }
+      ]
+    },
+    "mAccountPmtSrcToAnothermAccountDisbursement": {
+      "totalAmount": "10",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "mAccount",
+          "description": "mAccont payment source to another mAccount disbusment.",
+          "toMAccount": "6279059780668999",
+          "amount": "10"
+        }
+      ]
+    },
+    "mAccountPmtSrcTodirectCreditDisbursement": {
+      "totalAmount": "10",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "directCredit",
+          "toDirectCreditDetails": {
+            "bsbNumber": "032-000",
+            "accountNumber": "2681849",
+            "accountName": "Monoova"
+          },
+          "lodgementReference": "monoova-123",
+          "amount": "10"
+        }
+      ]
+    }
+  },
+  "negativeTestData": {
+    "noMwalletSuppliedForBpayTnx": {
+      "totalAmount": "10",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "10"
+        }
+      ]
+    },
+    "invalidMAccountToken": {
+      "totalAmount": "10",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "62790597783359939"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "10"
+        }
+      ]
+    },
+    "invalidMWalleToken": {
+      "totalAmount": "10",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "mWallet": {
+        "token": "62790597842269760",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "10"
+        }
+      ]
+    },
+    "invalidBillerCode": {
+      "totalAmount": "10",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "8577639",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "10"
+        }
+      ]
+    },
+    "invalidReferenceNumber": {
+      "totalAmount": "10",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "62790597000109182"
+          },
+          "amount": "10"
+        }
+      ]
+    },
+    "invalidCustomerPin": {
+      "totalAmount": "10",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "1111"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "10"
+        }
+      ]
+    },
+    "invalidZeroAmount": {
+      "totalAmount": "0",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "1111"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "0"
+        }
+      ]
+    },
+    "invalidTotalAmount": {
+      "totalAmount": "0.001",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "1111"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "0.001"
+        }
+      ]
+    },
+    "disbusmentBpayAmountIsInvalid": {
+      "totalAmount": "9.00",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "9.00"
+        }
+      ]
+    },
+    "exceedingMaximumTransactionAmount": {
+      "totalAmount": "100000001.00",
+      "paymentSource": "mAccount",
+      "mAccount": {
+        "token": "6279059778335999"
+      },
+      "mWallet": {
+        "token": "6279059784226976",
+        "pin": "0000"
+      },
+      "disbursements": [
+        {
+          "disbursementMethod": "bpay",
+          "toBPayDetails": {
+            "billerCode": "857763",
+            "referenceNumber": "6279059700010918"
+          },
+          "amount": "100000001.00"
+        }
+      ]
+    }
+  }
+}

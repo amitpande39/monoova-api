@@ -1,0 +1,14 @@
+# Dependency directories
+/node_modules
+
+### VisualStudioCode ###
+.vscode
+
+### OSX ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Tests Related
+**/html-report/
+**/logs/
